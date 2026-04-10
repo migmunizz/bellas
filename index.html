@@ -1,11 +1,532 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brasa & Alma — Restaurante Premium</title>
+    <link rel="stylesheet" href="style.css">
+    
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  
 </head>
 <body>
-    
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===== FLOATING WHATSAPP ===== -->
+  <div class="whatsapp-float">
+    <span class="whatsapp-tooltip">Fazer pedido agora</span>
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido"
+       target="_blank" class="whatsapp-btn" aria-label="Falar no WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">Brasa<span> & Alma</span></a>
+    <ul class="nav-links">
+      <li><a href="#cardapio">Cardápio</a></li>
+      <li><a href="#avaliacoes">Avaliações</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li>
+        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido"
+           target="_blank" class="nav-cta">
+          <i class="fa-brands fa-whatsapp"></i> Pedir Agora
+        </a>
+      </li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#cardapio" onclick="closeMobile()">Cardápio</a>
+    <a href="#avaliacoes" onclick="closeMobile()">Avaliações</a>
+    <a href="#sobre" onclick="closeMobile()">Sobre Nós</a>
+    <a href="#contato" onclick="closeMobile()">Contato</a>
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> Fazer Pedido
+    </a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-inner">
+      <!-- Text -->
+      <div class="hero-text">
+        <div class="hero-badge fade-in">
+          <i class="fa-solid fa-circle"></i>
+          Aberto agora · São Paulo, SP
+        </div>
+        <h1 class="hero-headline fade-in fade-in-delay-1">
+          <em>Onde o fogo</em>
+          <strong>encontra</strong>
+          a alma.
+        </h1>
+        <p class="hero-sub fade-in fade-in-delay-2">
+          Gastronomia autoral com técnicas de brasa e ingredientes selecionados.
+          Cada prato é uma experiência que fica na memória.
+        </p>
+        <div class="hero-actions fade-in fade-in-delay-3">
+          <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido"
+             target="_blank" class="btn-primary">
+            <i class="fa-brands fa-whatsapp"></i>
+            Fazer Pedido no WhatsApp
+          </a>
+          <a href="#cardapio" class="btn-ghost">
+            <i class="fa-solid fa-book-open"></i>
+            Ver Cardápio
+          </a>
+        </div>
+        <div class="hero-stats fade-in fade-in-delay-4">
+          <div class="stat"><div class="num">4.9</div><div class="lbl">Avaliação Google</div></div>
+          <div class="stat"><div class="num">12k+</div><div class="lbl">Pedidos entregues</div></div>
+          <div class="stat"><div class="num">8 anos</div><div class="lbl">Servindo SP</div></div>
+        </div>
+      </div>
+
+      <!-- Visuals -->
+      <div class="hero-visuals fade-in fade-in-delay-2">
+        <div class="hero-img">
+          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80" alt="Prato principal" />
+        </div>
+        <div class="hero-img">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80" alt="Pizza artesanal" />
+        </div>
+        <div class="hero-img">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80" alt="Burger gourmet" />
+        </div>
+
+        <div class="hero-float-badge">
+          <div class="number">★ 4.9</div>
+          <div class="label">Melhor restaurante<br>do bairro 2024</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CARDÁPIO ===== -->
+  <section id="cardapio">
+    <div class="menu-header fade-in">
+      <p class="section-label">O que preparamos</p>
+      <h2 class="section-title">Nosso <em>Cardápio</em></h2>
+      <div class="divider"></div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filter-tabs fade-in">
+      <button class="filter-tab active" data-cat="all">Todos</button>
+      <button class="filter-tab" data-cat="burgers">🍔 Burgers</button>
+      <button class="filter-tab" data-cat="pizzas">🍕 Pizzas</button>
+      <button class="filter-tab" data-cat="massas">🍝 Massas</button>
+      <button class="filter-tab" data-cat="bebidas">🥤 Bebidas</button>
+      <button class="filter-tab" data-cat="sobremesas">🍮 Sobremesas</button>
+    </div>
+
+    <!-- Cards -->
+    <div class="menu-grid" id="menuGrid">
+
+      <!-- BURGERS -->
+      <div class="menu-card fade-in" data-cat="burgers">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80" alt="Burger Clássico" />
+          <span class="menu-card-badge">⭐ Mais pedido</span>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Brasa Classic</div>
+          <div class="menu-card-desc">Blend de costela 180g, queijo cheddar artesanal, alface americana, tomate, picles e maionese da casa no brioche tostado.</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">R$ 38,90</span>
+            <a href="https://wa.me/5511999999999?text=Quero%20pedir%20um%20Brasa%20Classic" target="_blank" class="btn-pedido"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card fade-in fade-in-delay-1" data-cat="burgers">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=500&q=80" alt="Burger Duplo" />
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Double Flame</div>
+          <div class="menu-card-desc">Dois blends de costela 150g, bacon crocante, cheddar duplo, cebola caramelizada e molho especial picante.</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">R$ 52,90</span>
+            <a href="https://wa.me/5511999999999?text=Quero%20pedir%20um%20Double%20Flame" target="_blank" class="btn-pedido"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card fade-in fade-in-delay-2" data-cat="burgers">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=500&q=80" alt="Smash Burger" />
+          <span class="menu-card-badge">Novo</span>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Soul Smash</div>
+          <div class="menu-card-desc">Smash burguer com crosta perfeita, queijo americano, molho especial da casa e pão com gergelim tostado na manteiga.</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">R$ 34,90</span>
+            <a href="https://wa.me/5511999999999?text=Quero%20pedir%20um%20Soul%20Smash" target="_blank" class="btn-pedido"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PIZZAS -->
+      <div class="menu-card fade-in" data-cat="pizzas">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=80" alt="Pizza Margherita" />
+          <span class="menu-card-badge">⭐ Favorita</span>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Margherita Brasa</div>
+          <div class="menu-card-desc">Molho de tomate San Marzano, mussarela de búfala, manjericão fresco e um fio de azeite extravirgem. Forno a lenha.</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">R$ 54,90</span>
+            <a href="https://wa.me/5511999999999?text=Quero%20pedir%20uma%20Margherita%20Brasa" target="_blank" class="btn-pedido"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card fade-in fade-in-delay-1" data-cat="pizzas">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=500&q=80" alt="Pizza Calabresa" />
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Calabresa & Brasa</div>
+          <div class="menu-card-desc">Calabresa artesanal fatiada, cebola roxa, mussarela, orégano e molho de tomate defumado. Borda recheada disponível.</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">R$ 59,90</span>
+            <a href="https://wa.me/5511999999999?text=Quero%20pedir%20uma%20Calabresa%20Brasa" target="_blank" class="btn-pedido"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MASSAS -->
+      <div class="menu-card fade-in" data-cat="massas">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1516100882582-96c3a05fe590?w=500&q=80" alt="Carbonara" />
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Carbonara dell'Anima</div>
+          <div class="menu-card-desc">Spaghetti al dente, guanciale crocante, gema de ovo caipira, pecorino romano e pimenta negra moída na hora. Clássico romano.</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">R$ 62,90</span>
+            <a href="https://wa.me/5511999999999?text=Quero%20pedir%20uma%20Carbonara" target="_blank" class="btn-pedido"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEBIDAS -->
+      <div class="menu-card fade-in" data-cat="bebidas">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=500&q=80" alt="Drinks" />
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Limonada da Casa</div>
+          <div class="menu-card-desc">Limão siciliano fresco, hortelã, água com gás e toque de xarope de gengibre. Refrescante e artesanal.</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">R$ 14,90</span>
+            <a href="https://wa.me/5511999999999?text=Quero%20pedir%20uma%20Limonada" target="_blank" class="btn-pedido"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card fade-in fade-in-delay-1" data-cat="bebidas">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=500&q=80" alt="Suco" />
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Suco de Frutas Vermelhas</div>
+          <div class="menu-card-desc">Blend de morango, framboesa e amora frescos, sem conservantes. Servido gelado com açúcar demerara.</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">R$ 16,90</span>
+            <a href="https://wa.me/5511999999999?text=Quero%20pedir%20um%20Suco%20de%20Frutas%20Vermelhas" target="_blank" class="btn-pedido"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOBREMESAS -->
+      <div class="menu-card fade-in" data-cat="sobremesas">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500&q=80" alt="Brownie" />
+          <span class="menu-card-badge">🔥 Hot</span>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Brownie da Brasa</div>
+          <div class="menu-card-desc">Brownie de chocolate 70% quente, sorvete de baunilha artesanal e calda de caramelo salgado. Serve 2 pessoas.</div>
+          <div class="menu-card-footer">
+            <span class="menu-card-price">R$ 29,90</span>
+            <a href="https://wa.me/5511999999999?text=Quero%20pedir%20um%20Brownie%20da%20Brasa" target="_blank" class="btn-pedido"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== AVALIAÇÕES ===== -->
+  <section id="avaliacoes">
+    <div class="reviews-header fade-in">
+      <p class="section-label">O que nossos clientes dizem</p>
+      <h2 class="section-title">Avaliações <em>reais</em></h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="reviews-track-wrapper">
+      <div class="reviews-track">
+        <!-- Reviews set 1 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"O Brasa Classic é literalmente o melhor hambúrguer que já comi em SP. A carne tem um sabor incrível e o pão artesanal faz toda a diferença!"</p>
+          <div class="review-author">
+            <div class="review-avatar">M</div>
+            <div><div class="review-name">Mariana Oliveira</div><div class="review-date">há 2 dias · Google</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Pedi via WhatsApp e chegou em 35 minutos, quente e perfeito. A pizza Margherita com búfala fresca é divina. Virei cliente fiel!"</p>
+          <div class="review-author">
+            <div class="review-avatar">R</div>
+            <div><div class="review-name">Rafael Santos</div><div class="review-date">há 5 dias · iFood</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"A carbonara é autêntica de verdade, sem creme de leite! Ambiente lindo, atendimento impecável. Voltarei com toda a família."</p>
+          <div class="review-author">
+            <div class="review-avatar">C</div>
+            <div><div class="review-name">Carolina Mendes</div><div class="review-date">há 1 semana · Google</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"O brownie quente com sorvete... simplesmente perfeito. Melhor sobremesa que já tive. O restaurante tem alma de verdade no nome!"</p>
+          <div class="review-author">
+            <div class="review-avatar">L</div>
+            <div><div class="review-name">Lucas Ferreira</div><div class="review-date">há 2 semanas · iFood</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Pedido pelo WhatsApp foi super rápido e a atendente foi extremamente atenciosa. A limonada da casa já virou vício. Nota 10!"</p>
+          <div class="review-author">
+            <div class="review-avatar">A</div>
+            <div><div class="review-name">Amanda Costa</div><div class="review-date">há 3 semanas · Google</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★☆</div>
+          <p class="review-text">"Double Flame é pra quem tem coragem! Gigante, suculento e a cebola caramelizada combina perfeitamente. Entrega um pouco demorada, mas vale."</p>
+          <div class="review-author">
+            <div class="review-avatar">P</div>
+            <div><div class="review-name">Pedro Almeida</div><div class="review-date">há 1 mês · iFood</div></div>
+          </div>
+        </div>
+
+        <!-- Reviews set 2 (duplicate for infinite scroll) -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"O Brasa Classic é literalmente o melhor hambúrguer que já comi em SP. A carne tem um sabor incrível e o pão artesanal faz toda a diferença!"</p>
+          <div class="review-author">
+            <div class="review-avatar">M</div>
+            <div><div class="review-name">Mariana Oliveira</div><div class="review-date">há 2 dias · Google</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Pedi via WhatsApp e chegou em 35 minutos, quente e perfeito. A pizza Margherita com búfala fresca é divina. Virei cliente fiel!"</p>
+          <div class="review-author">
+            <div class="review-avatar">R</div>
+            <div><div class="review-name">Rafael Santos</div><div class="review-date">há 5 dias · iFood</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"A carbonara é autêntica de verdade, sem creme de leite! Ambiente lindo, atendimento impecável. Voltarei com toda a família."</p>
+          <div class="review-author">
+            <div class="review-avatar">C</div>
+            <div><div class="review-name">Carolina Mendes</div><div class="review-date">há 1 semana · Google</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"O brownie quente com sorvete... simplesmente perfeito. Melhor sobremesa que já tive. O restaurante tem alma de verdade no nome!"</p>
+          <div class="review-author">
+            <div class="review-avatar">L</div>
+            <div><div class="review-name">Lucas Ferreira</div><div class="review-date">há 2 semanas · iFood</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Pedido pelo WhatsApp foi super rápido e a atendente foi extremamente atenciosa. A limonada da casa já virou vício. Nota 10!"</p>
+          <div class="review-author">
+            <div class="review-avatar">A</div>
+            <div><div class="review-name">Amanda Costa</div><div class="review-date">há 3 semanas · Google</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★☆</div>
+          <p class="review-text">"Double Flame é pra quem tem coragem! Gigante, suculento e a cebola caramelizada combina perfeitamente. Entrega um pouco demorada, mas vale."</p>
+          <div class="review-author">
+            <div class="review-avatar">P</div>
+            <div><div class="review-name">Pedro Almeida</div><div class="review-date">há 1 mês · iFood</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE NÓS ===== -->
+  <section id="sobre">
+    <div class="sobre-inner">
+      <div class="sobre-text">
+        <p class="section-label fade-in">Nossa história</p>
+        <h2 class="section-title fade-in">Uma paixão que<br><em>virou restaurante</em></h2>
+        <div class="divider fade-in"></div>
+        <p class="fade-in">Fundado em 2016 pelo chef Marco Antônio, o Brasa & Alma nasceu de uma obsessão: o ponto perfeito das brasas. Depois de anos viajando pela Itália, Argentina e EUA aprendendo técnicas de cocção, Marco voltou a São Paulo com um sonho simples — criar pratos que tocam a alma.</p>
+        <p class="fade-in">Cada ingrediente é selecionado pessoalmente. Nossos pães são produzidos pela padaria artesanal parceira toda manhã. A carne vem de fazendas certificadas em Minas Gerais. Acreditamos que comida boa começa com respeito às origens.</p>
+        <div class="sobre-values fade-in">
+          <div class="value-item">
+            <div class="value-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <div class="value-title">Paixão pela Brasa</div>
+            <div class="value-desc">Técnicas artesanais de cocção que realçam o sabor natural.</div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><i class="fa-solid fa-leaf"></i></div>
+            <div class="value-title">Ingredientes Selecionados</div>
+            <div class="value-desc">Fornecedores locais e ingredientes frescos todos os dias.</div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><i class="fa-solid fa-heart"></i></div>
+            <div class="value-title">Feito com Amor</div>
+            <div class="value-desc">Cada prato é preparado como se fosse para a nossa família.</div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="value-title">Reconhecimento</div>
+            <div class="value-desc">Eleito melhor restaurante do bairro por 3 anos consecutivos.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sobre-visual fade-in">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80" alt="Interior do restaurante" class="sobre-img-main" />
+        <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=400&q=80" alt="Chef preparando" class="sobre-img-accent" />
+        <div class="sobre-award">
+          <div class="year">2024</div>
+          <div class="award-lbl">Melhor do<br>Bairro</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section id="contato">
+    <div class="contato-inner">
+      <div class="contact-info">
+        <p class="section-label fade-in">Onde nos encontrar</p>
+        <h2 class="section-title fade-in">Venha nos <em>visitar</em></h2>
+        <div class="divider fade-in"></div>
+
+        <div class="contact-item fade-in">
+          <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <div class="contact-label">Endereço</div>
+            <div class="contact-value">Rua das Flores, 842 — Vila Madalena<br>São Paulo, SP · CEP 05427-050</div>
+          </div>
+        </div>
+
+        <div class="contact-item fade-in">
+          <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <div class="contact-label">Telefone & WhatsApp</div>
+            <div class="contact-value">(11) 99999-9999</div>
+          </div>
+        </div>
+
+        <div class="contact-item fade-in">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <div class="contact-label">E-mail</div>
+            <div class="contact-value">contato@brasaealma.com.br</div>
+          </div>
+        </div>
+
+        <div class="map-placeholder fade-in" onclick="window.open('https://maps.google.com', '_blank')">
+          <i class="fa-solid fa-map"></i>
+          <span>Clique para abrir no Google Maps</span>
+        </div>
+      </div>
+
+      <div class="fade-in">
+        <div class="hours-grid">
+          <div class="open-now">
+            <div class="open-dot"></div>
+            Aberto agora
+          </div>
+          <h3>Horário de Funcionamento</h3>
+
+          <div class="hours-row">
+            <span class="hours-day">Segunda-feira</span>
+            <span class="hours-time">11h30 – 23h00</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Terça-feira</span>
+            <span class="hours-time">11h30 – 23h00</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Quarta-feira</span>
+            <span class="hours-time">11h30 – 23h00</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Quinta-feira</span>
+            <span class="hours-time">11h30 – 23h30</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Sexta-feira</span>
+            <span class="hours-time">11h30 – 00h00</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Sábado</span>
+            <span class="hours-time">12h00 – 00h30</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Domingo</span>
+            <span class="hours-time">12h00 – 22h00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Brasa<span> & Alma</span></div>
+      <p class="footer-copy">© 2024 Brasa & Alma. Todos os direitos reservados. Feito com ❤️ em São Paulo.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido" target="_blank" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+    <script src="script.js"> </script>
 </body>
 </html>
