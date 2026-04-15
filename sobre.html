@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nós — Brasa & Alma</title>
+  <meta name="description" content="Conheça a história do Brasa & Alma, fundado pelo Chef Marco Antônio em 2016.">
+  <link rel="icon" href="img/aee7ab41-a202-4059-b85f-1e4c9bf84bc9.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/sobre.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Botão flutuante WhatsApp -->
+  <div class="whatsapp-float">
+    <span class="whatsapp-tooltip">Fazer pedido agora</span>
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido"
+       target="_blank" class="whatsapp-btn" aria-label="Falar no WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">Bella's <span>Dadinhos de Tapioca</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="cardapio.html">Cardápio</a></li>
+      <li><a href="avaliacoes.html">Avaliações</a></li>
+      <li><a href="sobre.html" class="active">Sobre</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li>
+        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido"
+           target="_blank" class="nav-cta">
+          <i class="fa-brands fa-whatsapp"></i> Pedir Agora
+        </a>
+      </li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Menu Mobile -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMobile()">Início</a>
+    <a href="cardapio.html" onclick="closeMobile()">Cardápio</a>
+    <a href="avaliacoes.html" onclick="closeMobile()">Avaliações</a>
+    <a href="sobre.html" onclick="closeMobile()">Sobre</a>
+    <a href="contato.html" onclick="closeMobile()">Contato</a>
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> Fazer Pedido
+    </a>
+  </div>
+  <!-- ===== BANNER ===== -->
+  <div class="page-banner">
+    
+    <div class="page-banner-inner">
+      <nav class="breadcrumb">
+        <a href="index.html">Início</a><span>›</span><span>Sobre Nós</span>
+      </nav>
+      <p class="section-label fade-in">Nossa história</p>
+      <h1 class="section-title fade-in">Uma paixão que<br><em>virou restaurante</em></h1>
+    </div>
+  </div>
+
+  <!-- ===== SOBRE ===== -->
+  <section id="sobre">
+    <div class="sobre-inner">
+      <div class="sobre-text">
+        <div class="divider fade-in"></div>
+        <p class="fade-in">Fundado em 2016 pelo chef Marco Antônio, o Brasa & Alma nasceu de uma obsessão: o ponto perfeito das brasas. Depois de anos viajando pela Itália, Argentina e EUA aprendendo técnicas de cocção, Marco voltou a São Paulo com um sonho simples — criar pratos que tocam a alma.</p>
+        <p class="fade-in">Cada ingrediente é selecionado pessoalmente. Nossos pães são produzidos pela padaria artesanal parceira toda manhã. A carne vem de fazendas certificadas em Minas Gerais. Acreditamos que comida boa começa com respeito às origens.</p>
+        <div class="sobre-values fade-in">
+          <div class="value-item">
+            <div class="value-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <div class="value-title">Paixão pela Brasa</div>
+            <div class="value-desc">Técnicas artesanais de cocção que realçam o sabor natural.</div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><i class="fa-solid fa-leaf"></i></div>
+            <div class="value-title">Ingredientes Selecionados</div>
+            <div class="value-desc">Fornecedores locais e ingredientes frescos todos os dias.</div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><i class="fa-solid fa-heart"></i></div>
+            <div class="value-title">Feito com Amor</div>
+            <div class="value-desc">Cada prato é preparado como se fosse para a nossa família.</div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="value-title">Reconhecimento</div>
+            <div class="value-desc">Eleito melhor restaurante do bairro por 3 anos consecutivos.</div>
+          </div>
+        </div>
+      </div>
+      <div class="sobre-visual fade-in">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80"
+             alt="Interior do restaurante" class="sobre-img-main" />
+        <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=400&q=80"
+             alt="Chef preparando" class="sobre-img-accent" />
+        <div class="sobre-award">
+          <div class="year">2024</div>
+          <div class="award-lbl">Melhor do<br>Bairro</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Bella's Dadinhos de Tapioca<span> </span></div>
+      <p class="footer-copy">© 2026 Bella's Dadinhos de Tapioca. Todos os direitos reservados.</p>
+      
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
