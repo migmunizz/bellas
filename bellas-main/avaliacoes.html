@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avaliações — Bella's Dadinhos de Tapioca</title>
+  <meta name="description" content="Veja o que nossos clientes dizem sobre o Brasa & Alma.">
+  <link rel="icon" href="img/aee7ab41-a202-4059-b85f-1e4c9bf84bc9.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/avaliacoes.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Botão flutuante WhatsApp -->
+  <div class="whatsapp-float">
+    <span class="whatsapp-tooltip">Fazer pedido agora</span>
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido"
+       target="_blank" class="whatsapp-btn" aria-label="Falar no WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">Bella's <span>Dadinhos de Tapioca</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="cardapio.html">Cardápio</a></li>
+      <li><a href="avaliacoes.html" class="active">Avaliações</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li>
+        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido"
+           target="_blank" class="nav-cta">
+          <i class="fa-brands fa-whatsapp"></i> Pedir Agora
+        </a>
+      </li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Menu Mobile -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMobile()">Início</a>
+    <a href="cardapio.html" onclick="closeMobile()">Cardápio</a>
+    <a href="avaliacoes.html" onclick="closeMobile()">Avaliações</a>
+    <a href="sobre.html" onclick="closeMobile()">Sobre</a>
+    <a href="contato.html" onclick="closeMobile()">Contato</a>
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> Fazer Pedido
+    </a>
+  </div>
+  <!-- ===== BANNER ===== -->
+  <div class="page-banner">
+    <div class="page-banner-inner">
+      <nav class="breadcrumb">
+        <a href="index.html">Início</a><span>›</span><span>Avaliações</span>
+      </nav>
+      <p class="section-label fade-in">O que nossos clientes dizem</p>
+      <h1 class="section-title fade-in">Avaliações </h1>
+      <p class="banner-sub fade-in">Mais de 12.000 pedidos entregues. Veja o que nossos clientes falam.</p>
+    </div>
+  </div>
+
+  <!-- ===== AVALIAÇÕES ===== -->
+  <section id="avaliacoes">
+
+    <!-- Carrossel infinito -->
+    <div class="reviews-track-wrapper fade-in">
+      <div class="reviews-track">
+        <!-- Set 1 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"literalmente o melhor dadinho de tapioca que eu comi na vida muito crocante e saboroso recomendo!"</p>
+          <div class="review-author"><div class="review-avatar">M</div>
+            <div><div class="review-name">Mariana Oliveira</div><div class="review-date">há 2 dias · Google</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Sério, que surpresa boa! Já tinha ouvido falar, mas não imaginava que fosse tão bom assim. Vieram super crocantes por fora e macios por dentro, exatamente como tem que ser. não é pesado e dá vontade de continuar comendo sem parar."</p>
+          <div class="review-author"><div class="review-avatar">R</div>
+            <div><div class="review-name">Rafael Santos</div><div class="review-date">há 5 dias · iFood</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Pedi via WhatsApp e chegou em 35 minutos, quente e perfeito. Minha esposa amou virei cliente fiel"</p>
+          <div class="review-author"><div class="review-avatar">C</div>
+            <div><div class="review-name">Carolina Mendes</div><div class="review-date">há 1 semana · Google</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Viciante! Comecei com uma porção e já queria pedir outra. Um dos melhores petiscos que já provei"</p>
+          <div class="review-author"><div class="review-avatar">L</div>
+            <div><div class="review-name">Lucas Ferreira</div><div class="review-date">há 2 semanas · iFood</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Experiência incrível! Dá vontade de indicar pra todo mundo. Com certeza vou pedir de novo."</p>
+          <div class="review-author"><div class="review-avatar">A</div>
+            <div><div class="review-name">Amanda Costa</div><div class="review-date">há 3 semanas · Google</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★☆</div>
+          <p class="review-text">"O dadinho de parmesão é uma delicia demorou um pouco para chegar mas valeu apena"</p>
+          <div class="review-author"><div class="review-avatar">P</div>
+            <div><div class="review-name">Pedro Almeida</div><div class="review-date">há 1 mês · iFood</div></div>
+          </div>
+        </div>
+        <!-- Set 2 (duplicado p/ scroll infinito) -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"literalmente o melhor dadinho de tapioca que eu comi na vida muito crocante e saboroso recomendo demais principalmente o de parmesão!"</p>
+          <div class="review-author"><div class="review-avatar">M</div>
+            <div><div class="review-name">Mariana Oliveira</div><div class="review-date">há 2 dias · Google</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Pedi via WhatsApp e chegou em 35 minutos, quente e perfeito. Minha esposa amou virei cliente fiel"</p>
+          <div class="review-author"><div class="review-avatar">R</div>
+            <div><div class="review-name">Rafael Santos</div><div class="review-date">há 5 dias · iFood</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Sério, que surpresa boa! Já tinha ouvido falar, mas não imaginava que fosse tão bom assim. Vieram super crocantes por fora e macios por dentro, exatamente como tem que ser. não é pesado e dá vontade de continuar comendo sem parar."</p>
+          <div class="review-author"><div class="review-avatar">C</div>
+            <div><div class="review-name">Carolina Mendes</div><div class="review-date">há 1 semana · Google</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Pedido pelo WhatsApp foi super rápido e o atendimento foi maravilhoso. Nota 10!"</p>
+          <div class="review-author"><div class="review-avatar">L</div>
+            <div><div class="review-name">Lucas Ferreira</div><div class="review-date">há 2 semanas · iFood</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Experiência incrível! Dá vontade de indicar pra todo mundo. Com certeza vou pedir de novo."</p>
+          <div class="review-author"><div class="review-avatar">A</div>
+            <div><div class="review-name">Amanda Costa</div><div class="review-date">há 3 semanas · Google</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★☆</div>
+          <p class="review-text">"O dadinho de parmesão é uma delicia demorou um pouco para chegar mas valeu a pena"</p>
+          <div class="review-author"><div class="review-avatar">P</div>
+            <div><div class="review-name">Pedro Almeida</div><div class="review-date">há 1 mês · iFood</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid fixo de cards -->
+    <div class="reviews-grid">
+      <div class="review-card-full fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Experiência muito boa do começo ao fim. Atendimento rápido e entrega no prazo. Chegou quentinho e com um cheiro incrível. A textura é perfeita e o sabor se destaca bastante. Dá pra ver que tem qualidade nos ingredientes"</p>
+        <div class="review-author"><div class="review-avatar">M</div>
+          <div><div class="review-name">Mariana Machado</div><div class="review-date">há 2 dias · Google</div></div>
+        </div>
+      </div>
+      <div class="review-card-full fade-in fade-in-delay-1">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Pedi via WhatsApp e chegou em 35 minutos, quente e perfeito!"</p>
+        <div class="review-author"><div class="review-avatar">R</div>
+          <div><div class="review-name">Rodrigo Pereira</div><div class="review-date">há 5 dias · iFood</div></div>
+        </div>
+      </div>
+      <div class="review-card-full fade-in fade-in-delay-2">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Um dos melhores que já comi. O crocante é no ponto certo e o interior é leve, não fica enjoativo. Pedi pra dividir e me arrependi 😂. É aquele tipo de comida que você termina e já quer mais."</p>
+        <div class="review-author"><div class="review-avatar">C</div>
+          <div><div class="review-name">Marina Mendes</div><div class="review-date">há 1 semana · Google</div></div>
+        </div>
+      </div>
+      <div class="review-card-full fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Me surpreendeu bastante. Achei que seria comum, mas tem um sabor diferenciado e muito bem feito. Veio bem embalado, quentinho e com ótima apresentação. Dá pra ver cuidado em cada detalhe."</p>
+        <div class="review-author"><div class="review-avatar">L</div>
+          <div><div class="review-name">Antonio Ferreira</div><div class="review-date">há 2 semanas · iFood</div></div>
+        </div>
+      </div>
+      <div class="review-card-full fade-in fade-in-delay-1">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Perfeito pra qualquer ocasião. Pedi pra experimentar e virou o destaque. Todo mundo elogiou e pediu indicação. Tem um toque caseiro que faz toda diferença"</p>
+        <div class="review-author"><div class="review-avatar">A</div>
+          <div><div class="review-name">Amanda Silva</div><div class="review-date">há 3 semanas · Google</div></div>
+        </div>
+      </div>
+      <div class="review-card-full fade-in fade-in-delay-2">
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">"O dadinho de parmesão é uma delicia demorou um pouco para chegar mas valeu a pena"</p>
+        <div class="review-author"><div class="review-avatar">P</div>
+          <div><div class="review-name">Pedro Almeida</div><div class="review-date">há 1 mês · iFood</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Bella's Dadinhos de Tapioca<span> </span></div>
+      <p class="footer-copy">© 2026 Bella's Dadinhos de Tapioca. Todos os direitos reservados.</p>
+      
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
